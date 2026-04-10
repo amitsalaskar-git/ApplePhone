@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Apple iPhones</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        background-color: #f5f5f7;
+        color: #1d1d1f;
+    }
+
+    header {
+        background-color: #000;
+        color: #fff;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .tabs {
+        display: flex;
+        justify-content: center;
+        background: #fff;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .tab {
+        padding: 15px 30px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    .tab.active {
+        border-bottom: 3px solid #0071e3;
+        color: #0071e3;
+    }
+
+    .content {
+        display: none;
+        max-width: 1000px;
+        margin: auto;
+        padding: 30px;
+    }
+
+    .content.active {
+        display: block;
+    }
+
+    .phones {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .phone-card {
+        background: #fff;
+        width: 280px;
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        text-align: center;
+    }
+
+    .phone-card img {
+        width: 150px;
+        margin-bottom: 15px;
+    }
+
+    .price {
+        color: #0071e3;
+        font-size: 18px;
+        margin: 10px 0;
+    }
+
+    button {
+        background-color: #0071e3;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #005bb5;
+    }
+
+    footer {
+        text-align: center;
+        padding: 15px;
+        font-size: 14px;
+        color: #666;
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    <h2>Apple Store</h2>
+</header>
+
+<!-- Tabs -->
+<div class="tabs">
+    <div class="tab active" onclick="openTab('us')">Apple US</div>
+    <div class="tab" onclick="openTab('india')">Apple India</div>
+</div>
+
+<!-- Apple US Content -->
+<div id="us" class="content active">
+    <div class="phones">
+        <div class="phone-card">
+            https://via.placeholder.com/150
+            <h3>iPhone 15</h3>
+            <div class="price">$799</div>
+            <button>Buy</button>
+        </div>
+
+        <div class="phone-card">
+            https://via.placeholder.com/150
+            <h3>iPhone 15 Pro</h3>
+            <div class="price">$999</div>
+            <button>Buy</button>
+        </div>
+
+        <div class="phone-card">
+            https://via.placeholder.com/150
+            <h3>iPhone 14</h3>
+            <div class="price">$699</div>
+            <button>Buy</button>
+        </div>
+    </div>
+</div>
+
+<!-- Apple India Content -->
+<div id="india" class="content">
+    <div class="phones">
+        <div class="phone-card">
+            https://via.placeholder.com/150
+            <h3>iPhone 15</h3>
+            <div class="price">₹79,900</div>
+            <button>Buy</button>
+        </div>
+
+        <div class="phone-card">
+            https://via.placeholder.com/150
+            <h3>iPhone 15 Pro</h3>
+            <div class="price">₹1,34,900</div>
+            <button>Buy</button>
+        </div>
+
+        <div class="phone-card">
+            https://via.placeholder.com/150
+            <h3>iPhone 13</h3>
+            <div class="price">₹59,900</div>
+            <button>Buy</button>
+        </div>
+    </div>
+</div>
+
+<footer>
+    © 2026 Apple Inc. Sample HTML Page
+</footer>
+
+<script>
+    function openTab(tabId) {
+        let contents = document.querySelectorAll('.content');
+        let tabs = document.querySelectorAll('.tab');
+
+        contents.forEach(c => c.classList.remove('active'));
+        tabs.forEach(t => t.classList.remove('active'));
+
+        document.getElementById(tabId).classList.add('active');
+        event.target.classList.add('active');
+    }
+</script>
+
+</body>
+</html>
